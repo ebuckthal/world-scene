@@ -516,8 +516,8 @@ void motion(int x, int y)
    y = height - y;
 
 
-   float xdiff = (g_x-x);
-   float ydiff = (g_y-y);
+   float xdiff = (x-g_x);
+   float ydiff = (y-g_y);
 
    beta = obeta + ((float)xdiff/width)*PI;
 
