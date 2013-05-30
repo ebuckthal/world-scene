@@ -8,7 +8,7 @@ uniform float uShininess;
 
 void main()
 {
-    vec3 vReflect = normalize(vLightVector) - 2.0 * dot(vNormal, normalize(vLightVector))*vNormal;
+    vec3 vReflect = normalize(-vLightVector) - 2.0 * dot(vNormal, normalize(-vLightVector))*vNormal;
 
     vec3 AmbientColor = vec3(0.2, 0.2, 0.2);
     vec3 DiffuseColor = uDiffuse * clamp(dot(vNormal, normalize(vLightVector)), 0.0, 1.0);
